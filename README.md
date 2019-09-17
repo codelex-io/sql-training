@@ -1,6 +1,6 @@
-# SQL Training 📊 | [CODELEX](https://codelex.io)
+# 📊 SQL Training | [CODELEX](https://codelex.io)
 
-This repository consists of exercies to train your skill on SQL. SQLite was chosen because it is platform agnostic, and stores data in a single file which can be accessed easily.
+This repository consists of exercises to train your skills on SQL. SQLite was chosen because it is platform agnostic, and stores data in a single file which can be accessed easily.
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ SQLite Browser is a visual tool to help you work with a database.
 
 You can download it [here](https://sqlitebrowser.org/dl/).
 
-Opening database file is as easy finding it on your file system, file extension is `.sqlite3`
+Opening database file is as easy as finding it on your file system, file extension is `.sqlite3`
 
 ![Opening Database File](./docs/opening-database-file-sqlite-browser.gif)
 
@@ -53,4 +53,4 @@ And click on *References*.
 
 To start working on exercise, open it as a folder in Visual Studio Code and run `npm install`
 
-### [SQL Movies 🎬](./sql-movies)
+### [🎬 SQL Movies](./sql-movies)

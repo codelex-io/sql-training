@@ -1,4 +1,4 @@
-# SQL Movies 🎬
+# 🎬 SQL Movies
 
 Exercise goal is to create a valid database structure and store data about the movies.
 
@@ -24,7 +24,7 @@ Parsing is already done and you don't need to do anything, take a look [./src/da
 
 Tests are in [./test](./test) directory, work on them in ascending order.
 
-Each of the tests is creating a new database file from the previous test file and storing it in the [./_db](./_db) directory. Which means that you may want to move some steps backwards also, even if all the tests were green.
+Each test is creating a new database file from the previous test file and storing it in the [./_db](./_db) directory. Which means that you may want to move some steps backwards also, even if all the tests were green.
 
 To run test execute `npm run test-xx` where `xx` is test prefix, for example `npm run test-00`. Take a look if the database file was created.
 
@@ -38,9 +38,10 @@ To store all the information from the source files we will need tables, but you 
 
 Make all the tests green by writing correct statements for database creation.
 
+Table can be created by using a simple [SQL Statement](https://www.w3schools.com/sql/sql_create_table.asp).
+
 There are multiple things to keep in mind:
 
-1. Table can be created by using a simple [SQL Statement](https://www.w3schools.com/sql/sql_create_table.asp).
 1. Each of the column must have a proper datatype, see [SQLite Datatypes](https://www.sqlite.org/datatype3.html).
 1. Each table must have a [primary key](https://www.w3schools.com/sql/sql_primarykey.asp).
 1. Think about which of the columns cannot be `null` in any circumstances, add [NOT NULL Constraints](https://www.w3schools.com/sql/sql_notnull.asp).
