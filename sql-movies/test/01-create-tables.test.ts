@@ -200,8 +200,8 @@ describe("Tables", () => {
       PRODUCTION_COMPANIES
     )).map(mapFn);
     expect(productionCompanies).toEqual([
-      { name: "id", type: "integer" },
-      { name: "company_name", type: "text" }
+      { name: "id", primaryKey: true },
+      { name: "company_name", primaryKey: false }
     ]);
 
     done();
