@@ -43,12 +43,12 @@ describe("Tables", () => {
   beforeAll(async () => (db = await Database.fromExisting("00", "01")));
 
   const selectTableInfo = async (table: string) => {
-    return db.selectMultipleRows(tableInfo(table))
-  }
+    return db.selectMultipleRows(tableInfo(table));
+  };
 
   const selectIndexList = async (table: string) => {
-    return db.selectMultipleRows(indexList(table))
-  }
+    return db.selectMultipleRows(indexList(table));
+  };
 
   it("should create tables", async done => {
     const queries = [
@@ -196,10 +196,12 @@ describe("Tables", () => {
       { name: "genre", primaryKey: false }
     ]);
 
-    const productionCompanies = (await selectTableInfo(PRODUCTION_COMPANIES)).map(mapFn);
+    const productionCompanies = (await selectTableInfo(
+      PRODUCTION_COMPANIES
+    )).map(mapFn);
     expect(productionCompanies).toEqual([
-      { name: "id", primaryKey: true },
-      { name: "company_name", primaryKey: false }
+      { name: "id", type: "integer" },
+      { name: "company_name", type: "text" }
     ]);
 
     done();

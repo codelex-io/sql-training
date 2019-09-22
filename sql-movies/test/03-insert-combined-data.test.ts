@@ -39,7 +39,7 @@ describe("Insert Combined Data", () => {
       expect(row.id).not.toBeNaN();
       expect(row.user_id).toBe(107897);
       expect(row.rating).toBe(2.1);
-      expect(row.time_created).toBe('2002-07-19 09:17:07');
+      expect(row.time_created).toBe("2002-07-19 09:17:07");
 
       done();
     },
