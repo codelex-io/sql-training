@@ -32,7 +32,7 @@ const insertMovieGenres = (
   genres: string[],
   genreRows: GenreRow[]
 ): string => {
-  throw new Error(`todo`)
+  throw new Error(`todo`);
 };
 
 const insertMovieActors = (
@@ -40,7 +40,7 @@ const insertMovieActors = (
   actors: string[],
   actorRows: ActorRow[]
 ): string => {
-  throw new Error(`todo`)
+  throw new Error(`todo`);
 };
 
 const insertMovieDirectors = (
@@ -48,7 +48,7 @@ const insertMovieDirectors = (
   directors: string[],
   directorRows: DirectorRow[]
 ): string => {
-  throw new Error(`todo`)
+  throw new Error(`todo`);
 };
 
 const insertMovieKeywords = (
@@ -56,7 +56,7 @@ const insertMovieKeywords = (
   keywords: string[],
   keywordRows: KeywordRow[]
 ): string => {
-  throw new Error(`todo`)
+  throw new Error(`todo`);
 };
 
 const insertMovieProductionCompanies = (
@@ -64,7 +64,7 @@ const insertMovieProductionCompanies = (
   productionCompanies: string[],
   productionCompanyRows: ProductionCompanyRow[]
 ): string => {
-  throw new Error(`todo`)
+  throw new Error(`todo`);
 };
 
 describe("Insert Relationship Data", () => {
@@ -153,7 +153,9 @@ describe("Insert Relationship Data", () => {
     "should insert director relationship data",
     async done => {
       const movies = await CsvLoader.movies();
-      const directorRows = (await db.selectMultipleRows(`todo`)) as DirectorRow[];
+      const directorRows = (await db.selectMultipleRows(
+        `todo`
+      )) as DirectorRow[];
       const moviesByImdbId = _.groupBy(await CsvLoader.movies(), "imdbId");
 
       for (const imdbId of Object.keys(moviesByImdbId)) {
@@ -161,7 +163,9 @@ describe("Insert Relationship Data", () => {
           .id as number;
         const directors = movies.find(it => it.imdbId === imdbId)!.directors;
         if (directors.length > 0) {
-          await db.insert(insertMovieDirectors(movieId, directors, directorRows));
+          await db.insert(
+            insertMovieDirectors(movieId, directors, directorRows)
+          );
         }
       }
 
@@ -223,7 +227,9 @@ describe("Insert Relationship Data", () => {
     "should insert production companies relationship data",
     async done => {
       const movies = await CsvLoader.movies();
-      const productionCompanyRows = (await db.selectMultipleRows(`todo`)) as ProductionCompanyRow[];
+      const productionCompanyRows = (await db.selectMultipleRows(
+        `todo`
+      )) as ProductionCompanyRow[];
       const moviesByImdbId = _.groupBy(await CsvLoader.movies(), "imdbId");
 
       for (const imdbId of Object.keys(moviesByImdbId)) {

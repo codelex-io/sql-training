@@ -130,7 +130,9 @@ describe("Tables", () => {
       { name: "genre", type: "text" }
     ]);
 
-    const productionCompanies = (await selectTableInfo(PRODUCTION_COMPANIES)).map(mapFn);
+    const productionCompanies = (await selectTableInfo(
+      PRODUCTION_COMPANIES
+    )).map(mapFn);
     expect(productionCompanies).toEqual([
       { name: "id", type: "integer" },
       { name: "company_name", type: "text" }
@@ -264,7 +266,9 @@ describe("Tables", () => {
       { name: "genre", notNull: true }
     ]);
 
-    const productionCompanies = (await selectTableInfo(PRODUCTION_COMPANIES)).map(mapFn);
+    const productionCompanies = (await selectTableInfo(
+      PRODUCTION_COMPANIES
+    )).map(mapFn);
     expect(productionCompanies).toEqual([
       { name: "id", notNull: true },
       { name: "company_name", notNull: true }

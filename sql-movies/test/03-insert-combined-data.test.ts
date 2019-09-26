@@ -1,13 +1,17 @@
 import _ from "lodash";
 import { Database } from "../src/database";
 import { CsvLoader } from "../src/data/csv-loader";
-import { selectCount, selectRatingsByUserID, selectMovieId } from "../src/queries/select";
+import {
+  selectCount,
+  selectRatingsByUserID,
+  selectMovieId
+} from "../src/queries/select";
 import { MOVIE_RATINGS } from "../src/table-names";
 import { Rating } from "../src/data/types";
 import { minutes } from "./utils";
 
 const insertRatings = (movieId: number, ratings: Rating[]) => {
-  throw new Error(`todo`)
+  throw new Error(`todo`);
 };
 
 describe("Insert Combined Data", () => {

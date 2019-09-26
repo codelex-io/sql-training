@@ -30,23 +30,23 @@ const insertActors = (actors: string[]) => {
 };
 
 const insertKeywords = (keywords: string[]) => {
-  throw new Error(`todo`)
+  throw new Error(`todo`);
 };
 
 const insertDirectors = (directors: string[]) => {
-  throw new Error(`todo`)
+  throw new Error(`todo`);
 };
 
 const insertGenres = (genres: string[]) => {
-  throw new Error(`todo`)
+  throw new Error(`todo`);
 };
 
 const insertProductionCompanies = (companies: string[]) => {
-  throw new Error(`todo`)
+  throw new Error(`todo`);
 };
 
 const insertMovies = (movies: Movie[]) => {
-  throw new Error(`todo`)
+  throw new Error(`todo`);
 };
 
 describe("Insert Flat Data", () => {
