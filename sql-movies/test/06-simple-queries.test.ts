@@ -25,7 +25,7 @@ describe("Simple Queries", () => {
   );
 
   it(
-    "should select count from movies where budget was more than 100000000 and release date after 2009",
+    "should select count from movies where budget was more than 100000000",
     async done => {
       const query = `todo`;
       const result = await db.selectSingleRow(query);
