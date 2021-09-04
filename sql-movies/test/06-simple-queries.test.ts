@@ -25,12 +25,12 @@ describe("Simple Queries", () => {
   );
 
   it(
-    "should select count from movies where budget was more than 100000000",
+    "should select count from movies where budget was more than 100000000 and release date after 2009",
     async done => {
       const query = `todo`;
       const result = await db.selectSingleRow(query);
 
-      expect(result.count).toBe(116);
+      expect(result.count).toBe(87);
 
       done();
     },
