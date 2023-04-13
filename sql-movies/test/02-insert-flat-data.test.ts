@@ -25,28 +25,43 @@ import { minutes } from "./utils";
 const insertActors = (actors: string[]) => {
   return (
     `insert into actors (full_name) values` +
-    actors.map(actor => `('${escape(actor)}')`).join(",")
+    actors.map(actor => `('${escape(actor)}')`).join(",")    
   );
 };
 
 const insertKeywords = (keywords: string[]) => {
-  throw new Error(`todo`);
+  return (
+  `insert into keywords (keyword) values` +
+    keywords.map(keyword => `('${escape(keyword)}')`).join(",")
+    );
 };
 
 const insertDirectors = (directors: string[]) => {
-  throw new Error(`todo`);
+  return (
+    `insert into directors (director) values` +
+      directors.map(director => `('${escape(director)}')`).join(",")
+      );
 };
 
 const insertGenres = (genres: string[]) => {
-  throw new Error(`todo`);
+  return (
+    `insert into genres (genre) values` +
+      genres.map(genre => `('${escape(genre)}')`).join(",")
+      );
 };
 
 const insertProductionCompanies = (companies: string[]) => {
-  throw new Error(`todo`);
+  return (
+    `insert into companies (company) values` +
+      companies.map(company => `('${escape(company)}')`).join(",")
+      );
 };
 
-const insertMovies = (movies: Movie[]) => {
-  throw new Error(`todo`);
+const insertMovies = (movies: Movie[]) => {  
+  return (
+    `insert into movies (movie) values` +
+    movies.map(movie => `('${escape(movie.originalTitle)}')`).join(",")
+      );
 };
 
 describe("Insert Flat Data", () => {
