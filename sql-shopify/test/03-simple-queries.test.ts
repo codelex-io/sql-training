@@ -9,7 +9,7 @@ describe("Simple Queries", () => {
     }, minutes(1));
 
     it("should select app count with rating of 5 stars", async done => {
-        const query = `todo`;
+        const query = `INSERT INTO key_benefits (app_id, title, description) VALUES `;
         const result = await db.selectSingleRow(query);
         expect(result).toEqual({
             count: 731

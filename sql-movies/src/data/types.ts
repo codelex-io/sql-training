@@ -23,4 +23,4 @@ export interface Rating {
   imdbId: string;
   time_created: string;
   rating: number;
-}
+} 

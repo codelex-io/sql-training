@@ -30,23 +30,40 @@ const insertActors = (actors: string[]) => {
 };
 
 const insertKeywords = (keywords: string[]) => {
-  throw new Error(`todo`);
+  return (
+    `insert into keywords (keyword) values` +
+    keywords.map(keywords => `('${escape(keywords)}')`).join(",")
+  );
 };
 
 const insertDirectors = (directors: string[]) => {
-  throw new Error(`todo`);
+  return (
+    `insert into directors (full_name) values` +
+    directors.map(directors => `('${escape(directors)}')`).join(",")
+  );
 };
 
 const insertGenres = (genres: string[]) => {
-  throw new Error(`todo`);
+  return (
+    `insert into genres (genre) values` +
+    genres.map(genres => `('${escape(genres)}')`).join(",")
+  );
 };
 
 const insertProductionCompanies = (companies: string[]) => {
-  throw new Error(`todo`);
+  return (
+    `insert into production_companies (company_name) values` +
+    companies.map(companies => `('${escape(companies)}')`).join(",")
+  );
 };
 
 const insertMovies = (movies: Movie[]) => {
-  throw new Error(`todo`);
+  return (
+    `insert into ${MOVIES} (imdb_id, popularity, budget, budget_adjusted, revenue, revenue_adjusted, original_title, homepage, tagline, overview, runtime, release_date) values` +
+    movies.map(movie => `('${movie.imdbId}', ${movie.popularity}, ${movie.budget}, ${movie.budgetAdjusted}, ${movie.revenue}, ${movie.revenueAdjusted},
+    '${escape(movie.originalTitle)}', '${escape(movie.homepage)}', ${typeof movie.tagline === 'string' ? `'${escape(movie.tagline)}'` : ''}, '${escape(movie.overview)}',
+     ${movie.runtime}, '${escape(movie.releaseDate)}')`).join(",")
+  );
 };
 
 describe("Insert Flat Data", () => {
